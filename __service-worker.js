@@ -11,7 +11,7 @@ var CACHE_NAME = 'cache-version-' + VERSION;
 
 // Files
 var REQUIRED_FILES = [
-  'index.html'
+  '/'
 ];
 
 self.addEventListener('install', function (event) {
