@@ -1,9 +1,9 @@
 {
     "name": "BARUNA",
     "short_name": "BARUNA",
-    "start_url": "/",
+    "start_url": "/?v1",
     "display": "standalone",
-    "scope" : "/",
+    "scope" : "/?v1",
     "background_color": "#000000",
     "theme_color": "#000000",
     "orientation": "portrait",
