@@ -80,7 +80,7 @@
                                 <div class="form-group basic">
                                     <label class="label">Total Berat (Kg)</label>
                                     <div class="input-group mb-2">
-                                        <input type="text"  pattern="\d*" name="berat" class="form-control"  onkeyup="this.value=rupiah(this.value)" placeholder="Enter Berat Sampah">
+                                        <input type="tel"  pattern="\d*" name="berat" class="form-control"  onkeyup="this.value=rupiah(this.value)" placeholder="Enter Berat Sampah">
                                     </div>
                                 </div>
 
