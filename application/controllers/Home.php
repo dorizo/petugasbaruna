@@ -31,9 +31,8 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$user = $this->db->query("select * from user")->result_array();
 		$data["complaint"] = $this->db->query("select * from complaint")->result_array();
-		$data["beli"] = $this->db->query("select * from beli_sampah")->result_array();
+		$data["pembelian"] = $this->db->query("select * from beli_sampah limit 100")->result_array();
 		$data["activefooter"] = "home";
 		// print_r($user);
 		$this->load->view('template/header' , $data);
