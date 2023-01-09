@@ -2,7 +2,16 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Laporan extends CI_Controller {
-
+	public function __construct()
+	{
+			parent::__construct();
+			// $this->load->model('project_model');
+			if(!$this->session->userdata("userCode")){
+				redirect('/login', 'refresh');
+			}
+			// print_r($user_logged_in);
+			
+	}
 	/**
 	 * Index Page for this controller.
 	 *
