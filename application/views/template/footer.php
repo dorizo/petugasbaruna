@@ -287,7 +287,8 @@
     <script src="<?=base_url("assets")?>/js/plugins/splide/splide.min.js"></script>
     <!-- Base Js File -->
     <script src="<?=base_url("assets")?>/js/base.js"></script>
-
+    <script src="<?=base_url("assets")?>/js/easy-number-separator.js"></script>
+    
     <script>
         // Add to Home with 2 seconds delay.
         AddtoHome("2000", "once");

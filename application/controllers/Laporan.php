@@ -27,5 +27,7 @@ class Laporan extends CI_Controller {
 		$this->load->view('template/header' , $data);
 		$this->load->view('Laporan/view' , $data);
 		$this->load->view('template/footer' , $data);
+
+		
 	}
 }

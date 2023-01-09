@@ -31,8 +31,36 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
+		$mitra = $this->session->userdata("mitraCode");
 		$data["complaint"] = $this->db->query("select * from complaint")->result_array();
-		$data["pembelian"] = $this->db->query("select * from beli_sampah limit 100")->result_array();
+		$data["pembelian"] = $this->db->query("select a.bsCode,dbsCode , berat from detail_beli_sampah a JOIN jenis_sampah b ON b.jsCode=a.jsCode JOIN beli_sampah c ON c.bsCode=a.bsCode WHERE c.mitraCode=$mitra AND b.jsCode=3  order by dbsCode desc limit 100")->result_array();
+		$data["anggota"] = $this->db->query("select * from anggota limit 3")->result_array();
+		$data["activefooter"] = "home";
+		// print_r($user);
+		$this->load->view('template/header' , $data);
+		$this->load->view('home' , $data);
+		$this->load->view('template/footer' , $data);
+	}
+	
+	public function residu()
+	{
+		$mitra = $this->session->userdata("mitraCode");
+		$data["complaint"] = $this->db->query("select * from complaint")->result_array();
+		$data["pembelian"] = $this->db->query("select a.bsCode,dbsCode , berat from detail_beli_sampah a JOIN jenis_sampah b ON b.jsCode=a.jsCode JOIN beli_sampah c ON c.bsCode=a.bsCode WHERE c.mitraCode=$mitra AND  b.jsCode=2  order by dbsCode desc limit 100")->result_array();
+		$data["anggota"] = $this->db->query("select * from anggota limit 3")->result_array();
+		$data["activefooter"] = "home";
+		// print_r($user);
+		$this->load->view('template/header' , $data);
+		$this->load->view('home' , $data);
+		$this->load->view('template/footer' , $data);
+	}
+	
+	public function Recyclables()
+	{
+		$mitra = $this->session->userdata("mitraCode");
+		$data["complaint"] = $this->db->query("select * from complaint")->result_array();
+		$data["pembelian"] = $this->db->query("select a.bsCode,dbsCode , berat from detail_beli_sampah a JOIN jenis_sampah b ON b.jsCode=a.jsCode JOIN beli_sampah c ON c.bsCode=a.bsCode WHERE c.mitraCode=$mitra AND b.jsCode=1  order by dbsCode desc limit 100")->result_array();
+		$data["anggota"] = $this->db->query("select * from anggota limit 3")->result_array();
 		$data["activefooter"] = "home";
 		// print_r($user);
 		$this->load->view('template/header' , $data);
