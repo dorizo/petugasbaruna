@@ -44,16 +44,13 @@ self.addEventListener('fetch', function (event) {
   );
 });
 
-self.addEventListener('activate', function (event) {
-  // Calling claim() to force a "controllerchange" event on navigator.serviceWorker
-  event.waitUntil(self.clients.claim());
-});
 
 self.addEventListener('activate', (event) => {
   const cacheAllowlist = ['v2'];
 
   event.waitUntil(
     caches.forEach((cache, CACHE_NAME) => {
+      console.log(CACHE_NAME);
       if (!cacheAllowlist.includes(CACHE_NAME)) {
         return caches.delete(CACHE_NAME);
       }
