@@ -286,6 +286,7 @@
     <!-- Splide -->
     <script src="<?=base_url("assets")?>/js/plugins/splide/splide.min.js"></script>
     <!-- Base Js File -->
+    <script src="<?=base_url("assets")?>/js/base.js?v1"></script>
     <script src="<?=base_url("assets")?>/js/easy-number-separator.js"></script>
     
     <script>
