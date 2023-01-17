@@ -4,6 +4,6 @@ if ( ! function_exists('sparator'))
 {
     function sparator($var = '')
     {
-    return  number_format($var)." Kg";
+    return   number_format($var,4)." Kg";
     }   
 }

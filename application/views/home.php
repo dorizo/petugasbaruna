@@ -72,6 +72,7 @@
                             <p>Total Pengumpulan = <?=sparator($value["berat"])?></p>
                         </div>
                         <div class="card-footer">
+                        <?=$value["createAt"]?>
                         </div>
                     </div>
                 </div>

@@ -80,10 +80,14 @@
                                 <div class="form-group basic">
                                     <label class="label">Total Berat (Kg)</label>
                                     <div class="input-group mb-2">
-                                        <input type="tel" name="berat" class="form-control"  onkeyup="this.value=rupiah(this.value)" placeholder="Enter Berat Sampah">
+                                        <input type="tel" name="berat" class="form-control"   placeholder="Enter Berat Sampah">
                                     </div>
                                 </div>
-
+                                <div class="form-group basic">
+                                    <div class="input-group mb-2">
+                                        <input type="date" name="createAt" class="form-control"   placeholder="Enter Berat Sampah">
+                                    </div>
+                                </div>
 
                                 <div class="form-group basic">
                                     <button type="submit" class="btn btn-primary btn-block btn-lg"

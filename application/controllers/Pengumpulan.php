@@ -48,6 +48,7 @@ class Pengumpulan extends CI_Controller {
 		$p["harga"] = 0;
 		$p["total"] = 0;
 		$p["bsCode"] = $this->session->userdata("bsCode");
+		$p["createAt"] = $this->input->post("createAt");
 		$this->db->insert("detail_beli_sampah" , $p);
 		redirect('/pengumpulan/tambah', 'refresh');
 		// $data["activefooter"] = "Laporan";
